@@ -1,0 +1,83 @@
+10
+
+dir
+100
+http://xn--e1afhkfagivn.xn--p1ai/svn/project4/trunk/RGR/target
+http://xn--e1afhkfagivn.xn--p1ai/svn/project4
+
+
+
+2020-12-28T12:02:22.711314Z
+77
+user14
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0eb26f36-1ceb-4158-ac7b-94009a7ca352
+
+RGR-0.0.1-SNAPSHOT.jar
+file
+
+
+
+
+2020-12-31T04:48:57.317000Z
+8ca276596f2179935a893facd5bee407
+2020-12-28T12:02:22.711314Z
+77
+user14
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9607
+
+classes
+dir
+
+generated-sources
+dir
+
+generated-test-sources
+dir
+
+maven-archiver
+dir
+
+maven-status
+dir
+
+surefire-reports
+dir
+
+test-classes
+dir
+
