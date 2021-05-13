@@ -71,7 +71,7 @@ public class Main extends HttpServlet{
 				uslovie_try = 0;
 				dosr_try = 0;
 			}
-			if (summa_try < 50000 && summa_try > 3000000 && mesyac_try < 12 && mesyac_try > 60) {
+			if (summa_try < 50000 || summa_try > 3000000 || mesyac_try < 12 || mesyac_try > 60) {
 				summa_try = 0;
 				mesyac_try = 0;
 				uslovie_try = 0;
