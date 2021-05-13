@@ -20,9 +20,9 @@ text-align:center;
 <div class="a">
 <h1>Результат</h1>
 
-<p><strong>Ваша процентная ставка: </strong> ${proc}%</p> <br>
-<p><strong>Ежемесячный платеж составляет: </strong> ${mes} руб.</p> <br>
-<p><strong>Переплата по кредиту составит: </strong> ${pereplata} руб.</p> <br>
+<p><strong>Ваша процентная ставка: </strong> ${proc}%</p>
+<p><strong>Ежемесячный платеж составляет: </strong> ${mes} руб.</p>
+<p><strong>Переплата по кредиту составит: </strong> ${pereplata} руб.</p>
 <p><strong>Общая сумма: </strong> ${itog} руб.</p><br>
 
 <form action="${pageContext.request.contextPath}/User.jsp">
