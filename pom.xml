@@ -5,6 +5,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
+    <finalName>CreatePDF</finalName>
+  <defaultGoal>package</defaultGoal> 
 <pluginManagement>
             <plugins>
                 <plugin>

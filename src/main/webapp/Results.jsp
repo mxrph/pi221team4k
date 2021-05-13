@@ -27,6 +27,7 @@ text-align:center;
 
 <form action="${pageContext.request.contextPath}/User.jsp">
     <input type="submit" name="sign" value="Ввести новые данные"><br><br><br>
+    <li><a href="../result.pdf" download>Скачать PDF файл</a></li>
     </form>
 
 </body>
