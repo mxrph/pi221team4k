@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
                     );
             }
         
-        public void checkerka(HttpServletRequest request) throws IOException {
+        public void Check(HttpServletRequest request) throws IOException {
 
             String login_try;
             String pass_try;

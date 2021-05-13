@@ -40,8 +40,8 @@ public class Check implements Config {
         return srav;
     }
 
-    public void setParam() throws IOException {
-    	File file1 = new File("2.txt");
+    public void readdan() throws IOException {
+    	File file1 = new File("adminlogpass.txt");
         FileReader fr1 = new FileReader(file1);
         BufferedReader reader1 = new BufferedReader(fr1);
         String line;
@@ -53,7 +53,7 @@ public class Check implements Config {
         }
         reader1.close();
         
-        File file2 = new File("1.txt");
+        File file2 = new File("userlogpass.txt");
         FileReader fr2 = new FileReader(file2);
         BufferedReader reader2 = new BufferedReader(fr2);
         while((line = reader2.readLine()) != null) {
