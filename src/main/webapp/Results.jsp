@@ -7,15 +7,27 @@
 <title>Результат:</title>
 </head>
 <body>
+<body bgcolor="E0FFFF">
+<style>
+div.a {
+text-align:center;
+}
+ nav li {
+                 display: inline-block;
+               }
+</style>
+<body bgcolor="E0FFFF">
+<div class="a">
 <h1>Результат</h1>
 
-<p><strong>Ваша процентная ставка: </strong></p> <br>
-<p><strong>Ежемесячный платеж составляет: </strong></p> <br>
-<p><strong>Переплата по кредиту составит: </strong></p> <br>
-<p><strong>Общая сумма: </strong></p><br>
+<p><strong>Ваша процентная ставка: </strong> ${proc}%</p> <br>
+<p><strong>Ежемесячный платеж составляет: </strong> ${mes} руб.</p> <br>
+<p><strong>Переплата по кредиту составит: </strong> ${pereplata} руб.</p> <br>
+<p><strong>Общая сумма: </strong> ${itog} руб.</p><br>
 
 <form action="${pageContext.request.contextPath}/User.jsp">
     <input type="submit" name="sign" value="Ввести новые данные"><br><br><br>
+    <li><a href="../result.pdf" download>Скачать PDF файл</a></li>
     </form>
 
 </body>

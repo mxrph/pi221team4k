@@ -7,6 +7,13 @@
 <title>Калькулятор потребительского кредита</title>
 </head>
 <body>
+<style>
+div.a {
+text-align:center;
+}
+</style>
+<body bgcolor="E0FFFF">
+<div class="a">
 <h1>Калькулятор потребительского кредита</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <label for="summ">Введите сумму кредита от 50 000 до 3 000 000 рублей</label>
