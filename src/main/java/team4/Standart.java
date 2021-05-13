@@ -1,7 +1,5 @@
 package team4;
 
-import team4.Uslovie;
-
 public class Standart extends Uslovie   {
 
          @Override

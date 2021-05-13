@@ -33,6 +33,6 @@ public abstract class Uslovie {
 		proc -=2; }
 	}
 
-  
+ 
 	abstract float calculation(int summ_try, int mesyac_try, int dosr_try) throws IOException;
 }
