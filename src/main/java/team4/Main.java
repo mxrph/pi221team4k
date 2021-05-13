@@ -59,12 +59,24 @@ public class Main extends HttpServlet{
 			
 			
 		
-			
+			try {
 			summa_try = Integer.parseInt(summa);
 			mesyac_try = Integer.parseInt(mesyac);
 			uslovie_try = Integer.parseInt(uslovie);
 			dosr_try = Integer.parseInt(dosr);
-			
+			}
+			catch (NumberFormatException e) {
+				summa_try = 0;
+				mesyac_try = 0;
+				uslovie_try = 0;
+				dosr_try = 0;
+			}
+			if (summa_try < 50000 && summa_try > 3000000 && mesyac_try < 12 && mesyac_try > 60) {
+				summa_try = 0;
+				mesyac_try = 0;
+				uslovie_try = 0;
+				dosr_try = 0;
+			}
 			if (uslovie_try == 0) {
 				Standart uslovie = new Standart();
 				
