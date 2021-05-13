@@ -19,7 +19,7 @@ public class Check implements Config {
 
     public boolean check1(String login, String password) throws IOException {
     	srav = false;
-        setParam();
+    	readdan();
         for (int i = 0; i < admlog.size(); i++) {
             if (login.equals(admlog.get(i)) && password.equals(admpass.get(i))) {
             	srav = true;

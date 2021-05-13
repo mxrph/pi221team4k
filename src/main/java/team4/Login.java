@@ -17,7 +17,7 @@ public class Login extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestLogin auth = RequestLogin.fromRequestParameters(request);
-        auth.checkerka(request);
+        auth.Check(request);
 
         if (check1) {
             request.getRequestDispatcher("/Admin.jsp").forward(request, response);
