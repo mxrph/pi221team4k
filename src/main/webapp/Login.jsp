@@ -7,14 +7,27 @@
 <title>Окно авторизации</title>
 </head>
 <body>
-<body bgcolor="E0FFFF">
 <style>
 div.a {
 text-align:center;
 }
+input[type=submit] {
+  color: #fff; /* цвет текста */
+text-decoration: none; /* убирать подчёркивание у ссылок */
+user-select: none; /* убирать выделение текста */
+background: rgb(212,75,56); /* фон кнопки */
+padding: .5em 1.2em; /* отступ от текста */
+outline: none; /* убирать контур в Mozilla */
+border-radius:15px;
+border: none; /* убираем некрасивую тень */
+}
+input[type=submit]:hover {background: rgb(232,95,76); }
+input[type=submit]:active { background: rgb(152,15,0); }
+.font {
+font-family: "Times new roman", Times, serif}
 </style>
-<body bgcolor="E0FFFF">
 <div class="a">
+<div class ="font">
 <h1>Введите логин и пароль</h1>
 	<div class ="form">
     <form action="${pageContext.request.contextPath}/JavaLogin" method="post">
@@ -23,8 +36,8 @@ text-align:center;
 <label for="pass">Пароль</label>
 <input type="password" name="pass" id="pass" value="${pass}"><br>
 <input type="submit" name="sign" value="Войти">
-			<input type="button" value="Назад" onclick="history.back();"/>
 		</form>
+	</div>
 	</div>
 </body>
 </html>
