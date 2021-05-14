@@ -32,9 +32,9 @@ font-family: "Times new roman", Times, serif}
 	<div class ="form">
     <form action="${pageContext.request.contextPath}/JavaLogin" method="post">
 <label for="login">Логин</label>
-<input type="text" name="login" id="login" value="${login}"><br>
+<input type="text" name="login" id="login" placeholder="Логин" value="${login}"><br>
 <label for="pass">Пароль</label>
-<input type="password" name="pass" id="pass" value="${pass}"><br>
+<input type="password" name="pass" id="pass" placeholder="Пароль" value="${pass}"><br>
 <input type="submit" name="sign" value="Войти">
 		</form>
 	</div>
