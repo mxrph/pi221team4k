@@ -23,6 +23,11 @@ public class Main extends HttpServlet{
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
+		
+		PDF pdf1 = new PDF();
+		String goals = "Hello";
+		pdf1.create(goals);
+		
 	}
 	private static class RequestCalc {
 		private final String summa;

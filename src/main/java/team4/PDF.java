@@ -14,11 +14,10 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 public class PDF implements ActionListener {
 	
-	@Override 
-	public void actionPerformed(ActionEvent arg0) { 
+	public static void create(String goals) { 
 		Document document = new Document(); 
 		try {
-			PdfWriter.getInstance(document, new FileOutputStream("result.pdf"));
+			PdfWriter.getInstance(document, new FileOutputStream("/var/apache-tomcat-9.0.39/webapps/CreatePDF/Config/result.pdf"));
 		} catch (FileNotFoundException | DocumentException e) {
 			e.printStackTrace();
 		}
@@ -32,17 +31,17 @@ public class PDF implements ActionListener {
 			e.printStackTrace();
 		}
 		
-		String string_pdf = "Процент:" + Uslovie.proc;
+		String string_pdf = "Procent:" + Uslovie.proc;
 		Paragraph paragraph = new Paragraph();
 	    paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 	    
-	    String string_pdf2 = "Ежемесячный платёж:" + Uslovie.mesyac;
+	    String string_pdf2 = "Platez:" + Uslovie.mesyac;
 	    paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 	
-	    String string_pdf3 = "Переплата по кредиту:" + Uslovie.pereplata;
+	    String string_pdf3 = "Pereplata:" + Uslovie.pereplata;
 	    paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
 	    
-	    String string_pdf4 = "Итоговая сумма:" + Uslovie.itog;
+	    String string_pdf4 = "Summa:" + Uslovie.itog;
 	    paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
 	
 	    try {
@@ -53,6 +52,12 @@ public class PDF implements ActionListener {
 		document.close(); 
 		
 	}
-	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
