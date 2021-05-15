@@ -27,7 +27,7 @@ public class PDF implements ActionListener {
 		
 		BaseFont times = null;
 		try {
-			times = BaseFont.createFont("/fonts/times.ttf", "UTF-8", BaseFont.EMBEDDED);
+			times = BaseFont.createFont("", "UTF-8", BaseFont.EMBEDDED);
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}
