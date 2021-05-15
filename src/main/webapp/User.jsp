@@ -51,7 +51,7 @@ input[type=submit]:active { background: rgb(152,15,0); }
 					<option value="2">Являюсь сотрудником компании партнёров этого банка</option>
 				</select></div><br>
 		<label for="god">Планируете досрочно погашать кредит в первый год?</label>
-		<input type="radio" name="dosr" value="1">Да
+		<input type="radio" name="dosr" value="1">Да 
 		<input checked type="radio" name="dosr" value="-1">Нет<br><br>
         <div class="a"><input type="submit" name="sign" value="Вычислить"></div>
         </div>
