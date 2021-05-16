@@ -17,7 +17,7 @@ public class PDF implements ActionListener {
 	public static void create(String goals) { 
 		Document document = new Document(); 
 		try {
-			PdfWriter.getInstance(document, new FileOutputStream("/var/apache-tomcat-9.0.39/webapps/CreatePDF/Config/result.pdf"));
+			PdfWriter.getInstance(document, new FileOutputStream("/var/apache-tomcat-9.0.39/webapps/CalcTeam4/Config/result.pdf"));
 		} catch (FileNotFoundException | DocumentException e) {
 			e.printStackTrace();
 		}
