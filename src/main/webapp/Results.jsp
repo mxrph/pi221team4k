@@ -49,7 +49,7 @@ a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
 	<div class ="center"><form action="${pageContext.request.contextPath}/User.jsp">
     <input type="submit" name="sign" value="Ввести новые данные"><br><br>
     </form>
-    <a href="/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
+    <a href="tmp/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
 </div>
 </body>
 </html>
