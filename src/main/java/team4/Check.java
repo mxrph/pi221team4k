@@ -41,7 +41,7 @@ public class Check implements Config {
     }
 
     public void readdan() throws IOException {
-    	File file1 = new File("adminlogpass.txt");
+    	File file1 = new File("app/adminlogpass.txt");
         FileReader fr1 = new FileReader(file1);
         BufferedReader reader1 = new BufferedReader(fr1);
         String line;
@@ -53,7 +53,7 @@ public class Check implements Config {
         }
         reader1.close();
         
-        File file2 = new File("userlogpass.txt");
+        File file2 = new File("app/userlogpass.txt");
         FileReader fr2 = new FileReader(file2);
         BufferedReader reader2 = new BufferedReader(fr2);
         while((line = reader2.readLine()) != null) {
