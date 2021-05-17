@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Результат</title>
+<title>Результат:</title>
 </head>
 <body>
 <style>
@@ -17,25 +17,25 @@ text-align:center;
   color: #fff; /* цвет текста */
 text-decoration: none; /* убирать подчёркивание у ссылок */
 user-select: none; /* убирать выделение текста */
-background: rgb(212,75,56); /* фон кнопки */
+background: rgb(0,32,255); /* фон кнопки */
 padding: .5em 1.2em; /* отступ от текста */
 outline: none; /* убирать контур в Mozilla */
 border: none; /* убираем некрасивую тень */
 border-radius:15px;
 }
-input[type=submit]:hover {background: rgb(232,95,76); }
-input[type=submit]:active { background: rgb(152,15,0); }
+input[type=submit]:hover {background: rgb(0,96,255); }
+input[type=submit]:active { background: rgb(0,64,0); }
   a.knopka {
 color: #fff; /* цвет текста */
 text-decoration: none; /* убирать подчёркивание у ссылок */
 user-select: none; /* убирать выделение текста */
-background: rgb(212,75,56); /* фон кнопки */
+background: rgb(0,32,255); /* фон кнопки */
 padding: .5em 1.3em; /* отступ от текста */
 outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
 }
-a.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
+a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
+a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
 </style>
 <div class ="font">
 
@@ -49,7 +49,7 @@ a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
 	<div class ="center"><form action="${pageContext.request.contextPath}/User.jsp">
     <input type="submit" name="sign" value="Ввести новые данные"><br><br>
     </form>
-    <a href="app/tmp/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
+    <a type="submit" href="/CreatePDF/Config/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
 </div>
 </body>
 </html>

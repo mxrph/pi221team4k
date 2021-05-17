@@ -67,6 +67,7 @@ font-family: "Times new roman", Times, serif}
   <label  class="form-fields-group-label" for="name">Пароль</label>
 </div>
 <br>
+<label for="pass">Неверный логин или пароль</label><br>
 <input type="submit" name="sign" value="Войти">
 		</form>
 	</div>

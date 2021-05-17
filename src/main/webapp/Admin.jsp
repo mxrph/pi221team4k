@@ -4,24 +4,98 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Калькулятор потребительского кредита</title>
+<title>Меню администратора</title>
 </head>
 <body>
-<body bgcolor="E0FFFF">
-<h1>Калькулятор потребительского кредита (администратор)</h1>
+<style>
+	.box {
+  border:0;
+  padding:5px;
+  border-radius:15px;
+}
+input[type=submit] {
+  color: #fff; /* цвет текста */
+text-decoration: none; /* убирать подчёркивание у ссылок */
+user-select: none; /* убирать выделение текста */
+background: rgb(0,32,255); /* фон кнопки */
+padding: .5em 1.2em; /* отступ от текста */
+outline: none; /* убирать контур в Mozilla */
+border-radius:15px;
+border: none; /* убираем некрасивую тень */
+}
+input[type=submit]:hover {background: rgb(0,96,255)); }
+input[type=submit]:active { background: rgb(0,64,0); }
+.form-fields-group {
+  position: relative;
+}
+
+.form-fields-group-label {
+    position: absolute;
+    font-size: 13px;
+    color: #27252a;
+    font-family: 'Roboto', sans-serif;
+    top: 10px;
+    left: 15px;
+}
+
+.form-fields-input {
+    width: 300px;
+    padding: 30px 15px 10px;
+    border: none;
+    background: #EAEAEE;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+input:focus ~ label, label:focus {
+  color: blue;
+}
+	.new-select-style-wpandyou select {
+    border-radius: 0;
+    background: #EAEAEE;
+    height: 34px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    -webkit-appearance: none;
+    width: 400px;
+   }
+	.select {
+  width: 100%;
+  padding:5px;
+  border-radius:10px;
+  }
+  .font {
+  font-family: "Times New Roman", Times,serif }
+  	.a {
+  	text-align :center;
+  	}
+</style>
+<body bgcolor="FFFFFF">
+<div class = "font">
+<h1>Меню администратора</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
-        <label for="summ">Введите сумму кредита от 50 000 до 3 000 000 рублей</label><br>
-        <input type="text" name="summ" id="summ" value="${summ}"><br>
-        <label for="second">Введите срок выплат от 12 до 60 месяцев </label><br>
-        <input type="text" name="mes" id="mes" value="${mes}"><br>
-        <a>Выберите условия кредита</a><br>
-        <select size="1">
-        <option value="Standart">Стандартные условия</option>
-        <option value="dliaZaiomshikov">Держу зарплатный проект в данном банке</option>
-        <option value="DliaSotrunikov">Являюсь сотрудников компании партнёров этого банка</option>
-        </select><br>
-        <input type ="checkbox" name="dosr" value="dosr"> <label>Не планирую досрочно погашать кредит в первый год</label><br>
-        <input type="submit" name="sign" value="Вычислить">
-    </form>
+         <div class="form-fields-group">
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" required>
+  <label class="form-fields-group-label" for="name">Введите новую минимальную сумму</label>
+</div><br>
+         <div class="form-fields-group">
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" required>
+  <label class="form-fields-group-label" for="name">Введите новую максимальную сумму</label>
+</div><br>
+ 		<div class="form-fields-group">
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите срок" required>
+  <label class="form-fields-group-label" for="name">Введите минимальный срок кредитования</label>
+</div><br>
+		<div class="form-fields-group">
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите срок" required>
+  <label class="form-fields-group-label" for="name">Введите максимальный срок кредитования</label>
+</div><br>
+ <div class="a"><input type="submit" name="sign" value="Сохранить изменения"></div>
+        </div>
+       </form> 
     </body>
 </html>
