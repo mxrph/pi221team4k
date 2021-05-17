@@ -24,7 +24,7 @@ border-radius:15px;
 border: none; /* убираем некрасивую тень */
 }
 input[type=submit]:hover {background: rgb(0,96,255)); }
-input[type=submit]:active { background: rgb(0,64,0); }
+input[type=submit]:active { background: rgb(0,64,255); }
 .form-fields-group {
   position: relative;
 }
@@ -39,7 +39,7 @@ input[type=submit]:active { background: rgb(0,64,0); }
 }
 
 .form-fields-input {
-    width: 300px;
+    width: 400px;
     padding: 30px 15px 10px;
     border: none;
     background: #EAEAEE;
