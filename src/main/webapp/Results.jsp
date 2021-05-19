@@ -49,6 +49,7 @@ a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
 	<div class ="center"><form action="${pageContext.request.contextPath}/User.jsp">
     <input type="submit" name="sign" value="Ввести новые данные"><br><br>
     </form>
+    <a type="submit" href="/CalcTeam4/Config/result.pdf" class="knopka" > Открыть PDF-файл</a><br>
     <a type="submit" href="/CalcTeam4/Config/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
 </div>
 </body>

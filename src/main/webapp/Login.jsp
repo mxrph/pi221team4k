@@ -61,7 +61,7 @@ font-family: "Times new roman", Times, serif
   </div> 
    <div class="form-fields-group">
 <label class="form-fields-group-label" for="pass">Пароль</label>
-<input type="password" name="pass" id="pass" class="form-fields-input" placeholder="Пароль" value="${pass}"required><br>
+<input type="password" name="pass" id="pass" class="form-fields-input" placeholder="Пароль" value="${pass}"required><br><br>
 <input type="submit" name="sign" value="Войти">
 </div>
 		</form>

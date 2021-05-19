@@ -159,10 +159,10 @@ input:focus ~ label, label:focus {
 					<option value="1">Держу зарплатный проект в данном банке</option>
 					<option value="2">Являюсь сотрудником компании партнёров этого банка</option>
 				</select></div><br><br>
-		<label  for="name">Собираетесь ли вы досрочно погашать кредит?</label>
+		<label  for="name">Собираетесь ли вы досрочно погашать кредит?</label><br>
 	<div class="radio">
     <label class="custom-radio">
-      <input type="radio" name="dosr" value="1">
+      <input type="radio" name="dosr" value="1"><br>
       <span>Да</span>
     </label>
   </div>
