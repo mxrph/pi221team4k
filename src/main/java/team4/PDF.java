@@ -49,16 +49,6 @@ public class PDF implements ActionListener {
 	    String lower = "Ниже представлены итоговые вычисления на основе ваших введённых данных";
 	    paragraph.add(new Paragraph(lower, new Font(times,14, Font.BOLD)));
 	    
-	    //переход на новую строчку
-		 paragraph.clear();
-		 paragraph.add(new Paragraph(lower, new Font(times,14)));
-		 
-		 try {
-				document.add(paragraph);
-			} catch (DocumentException e1) {
-				e1.printStackTrace();
-			}
-	    
 		String string_pdf = "Ваша процентная ставка: " + Uslovie.proc;
 	    paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 	    
