@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
         } else if (check2) {
             request.getRequestDispatcher("/User.jsp").forward(request, response);
         } else {
-        	request.getRequestDispatcher("/Login.jsp").forward(request, response);
+        	request.getRequestDispatcher("/LoginFalse.jsp").forward(request, response);
         }
     }
 

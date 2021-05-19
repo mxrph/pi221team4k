@@ -147,11 +147,11 @@ input:focus ~ label, label:focus {
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <div class="form-fields-group">
         <label class=form-fields-group-label for="summ">Введите сумму кредита от 50 000 до 3 000 000 рублей</label>
-       <input class="form-fields-input" type="text" name="summa" id="summa" placeholder="Сумма" value="${summa}"></div><br>
+       <input class="form-fields-input" type="text" name="summa" id="summa" placeholder="Сумма" value="${summa}" required pattern="^[0-9]*$"></div><br>
        </div>
        <div class="form-fields-group">
         <label class=form-fields-group-label for="second">Введите срок выплат от 12 до 60 месяцев </label>
-        <input  class="form-fields-input" type="text" name="mesyac" id="mesyac" placeholder="Месяц" value="${mesyac}"></div><br>
+        <input  class="form-fields-input" type="text" name="mesyac" id="mesyac" placeholder="Месяц" value="${mesyac}" required pattern="^[0-9]*$"></div><br>
         </div>
         <label for="uslovie">Выберите условия кредита</label>
          <div class="new-select-style-wpandyou"><select id="uslovie" name="uslovie">
@@ -162,7 +162,7 @@ input:focus ~ label, label:focus {
 		<label  for="name">Собираетесь ли вы досрочно погашать кредит?</label><br>
 	<div class="radio">
     <label class="custom-radio">
-      <input type="radio" name="dosr" value="1"><br>
+      <input type="radio" name="dosr" value="1">
       <span>Да</span>
     </label>
   </div>

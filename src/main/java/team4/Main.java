@@ -25,7 +25,7 @@ public class Main extends HttpServlet{
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 		
 		PDF pdf1 = new PDF();
-		String goals = "Hello";
+		String goals = "";
 		pdf1.create(goals);
 		
 	}
