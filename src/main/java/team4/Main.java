@@ -33,10 +33,7 @@ public class Main extends HttpServlet{
 		
 	}
 	private static class RequestCalc {
-		public int minsumm;
-		public int maxsumm;
-		public int minmec;
-		public int maxmec;
+
 		private final String summa;
 		private final String mesyac;
 		private final String uslovie;
@@ -69,17 +66,7 @@ public class Main extends HttpServlet{
 			int uslovie_try;
 			int dosr_try;
 		
-			try {
-				BufferedReader reader= new BufferedReader(new InputStreamReader(new FileInputStream("home/stepanyan/apache-tomcat-9.0.45/webapps/CalcTeam4/Config/koef.txt")));
-				      minsumm = Integer.parseInt(reader.readLine());
-				      maxsumm = Integer.parseInt(reader.readLine());
-				    minmec = Integer.parseInt(reader.readLine());
-				   maxmec = Integer.parseInt(reader.readLine());
-				   reader.close();	
-			}
-				catch (Exception ex) {
-				  ex.printStackTrace();
-				}
+		
 			
 		
 			try {
@@ -94,7 +81,7 @@ public class Main extends HttpServlet{
 				uslovie_try = 0;
 				dosr_try = 0;
 			}
-			if (summa_try < minsumm || summa_try > maxsumm || mesyac_try < minmec || mesyac_try > maxmec) {
+			if (summa_try < 50000 || summa_try > 3000000 || mesyac_try < 12|| mesyac_try > 60) {
 				summa_try = 0;
 				mesyac_try = 0;
 				uslovie_try = 0;
