@@ -49,16 +49,16 @@ public class PDF implements ActionListener {
 	    String lower = "Ниже представлены итоговые вычисления на основе ваших введённых данных";
 	    paragraph.add(new Paragraph(lower, new Font(times,14, Font.BOLD)));
 	    
-		String string_pdf = "Ваша процентная ставка: " + Uslovie.proc;
+		String string_pdf = "Ваша процентная ставка: " + Uslovie.proc + "%";
 	    paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 	    
-	    String string_pdf2 = "Ежемесячный платеж составляет: " + Uslovie.mesyac;
+	    String string_pdf2 = "Ежемесячный платеж составляет: " + Uslovie.mesyac + "руб.";
 	    paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 	
-	    String string_pdf3 = "Переплата по кредиту составит: " + Uslovie.pereplata;
+	    String string_pdf3 = "Переплата по кредиту составит: " + Uslovie.pereplata + "руб.";
 	    paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
 	    
-	    String string_pdf4 = "Общая сумма кредита: " + Uslovie.itog;
+	    String string_pdf4 = "Общая сумма кредита: " + Uslovie.itog + "руб.";
 	    paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
 	    
 	    try {

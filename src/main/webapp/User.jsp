@@ -140,9 +140,15 @@ input:focus ~ label, label:focus {
     .radio {
       margin-bottom: 0.2em;
     }
+    .topright {
+    float:center;
+    }
 </style>
 <body background="${pageContext.request.contextPath}/Config/123.jpg">
 <div class = "font">
+   <div class = "topright">
+    <div class="a"><div class = "input"> <a href="komanda.jsp" role="button">О нас</a></div></div>
+              </div>
 <h1>Калькулятор потребительского кредита</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <div class="form-fields-group">
@@ -159,7 +165,7 @@ input:focus ~ label, label:focus {
 					<option value="1">Держу зарплатный проект в данном банке</option>
 					<option value="2">Являюсь сотрудником компании партнёров этого банка</option>
 				</select></div><br><br>
-		<label  for="name">Собираетесь ли вы досрочно погашать кредит?</label><br>
+		<label for="name">Собираетесь ли вы досрочно погашать кредит?</label><br>
 	
 	<div class="radio">
     <label class="custom-radio">
