@@ -77,22 +77,14 @@ input:focus ~ label, label:focus {
 <body bgcolor="FFFFFF">
 <div class = "font">
 <h1>Меню администратора</h1>
-    <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
+    <form action="${pageContext.request.contextPath}/Admin" method="post">
          <div class="form-fields-group">
-  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" required>
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" name="a1" required>
   <label class="form-fields-group-label" for="name">Введите новую минимальную сумму</label>
 </div><br>
          <div class="form-fields-group">
-  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" required>
+  <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" name="a2" required>
   <label class="form-fields-group-label" for="name">Введите новую максимальную сумму</label>
-</div><br>
- 		<div class="form-fields-group">
-  <input type="text" id="name" class="form-fields-input" placeholder="Введите срок" required>
-  <label class="form-fields-group-label" for="name">Введите минимальный срок кредитования</label>
-</div><br>
-		<div class="form-fields-group">
-  <input type="text" id="name" class="form-fields-input" placeholder="Введите срок" required>
-  <label class="form-fields-group-label" for="name">Введите максимальный срок кредитования</label>
 </div><br>
  <div class="a"><input type="submit" name="sign" value="Сохранить изменения"></div>
         </div>

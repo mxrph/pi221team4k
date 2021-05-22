@@ -2,6 +2,7 @@ package team4;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,7 +34,9 @@ public class Main extends HttpServlet{
 		
 	}
 	private static class RequestCalc {
-
+		
+		public int a1;
+		public int a2;
 		private final String summa;
 		private final String mesyac;
 		private final String uslovie;
@@ -66,7 +69,24 @@ public class Main extends HttpServlet{
 			int uslovie_try;
 			int dosr_try;
 		
-		
+			try {
+				String filepath = new File("").getCanonicalPath();
+				String[] parsfilepath = filepath.split("/");
+				
+				int lengthpath = parsfilepath.length;
+				String abspath=""; 
+				for(int i=0;i<(lengthpath-1);i++) {
+					abspath=abspath+parsfilepath[i]+"/";
+				}
+				filepath=abspath+"webapps/CalcTeam4/Config/koef.txt";
+				BufferedReader reader= new BufferedReader(new InputStreamReader(new FileInputStream(filepath)));
+				a1 = Integer.parseInt(reader.readLine());
+				a2 = Integer.parseInt(reader.readLine());
+				reader.close();
+				}
+				catch (Exception ex) {
+				ex.printStackTrace();
+				}
 			
 		
 			try {
@@ -81,7 +101,7 @@ public class Main extends HttpServlet{
 				uslovie_try = 0;
 				dosr_try = 0;
 			}
-			if (summa_try < 50000 || summa_try > 3000000 || mesyac_try < 12|| mesyac_try > 60) {
+			if (summa_try < a1 || summa_try > a2 || mesyac_try < 12|| mesyac_try > 60) {
 				summa_try = 0;
 				mesyac_try = 0;
 				uslovie_try = 0;
