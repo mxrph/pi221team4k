@@ -141,12 +141,12 @@ input:focus ~ label, label:focus {
       margin-bottom: 0.2em;
     }
 </style>
-<body bgcolor="FFFFFF">
+<body background="${pageContext.request.contextPath}/Config/123.jpg">
 <div class = "font">
 <h1>Калькулятор потребительского кредита</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <div class="form-fields-group">
-        <label class=form-fields-group-label for="summ">Введите сумму кредита от 50 000 до 3 000 000 рублей</label>
+        <label class=form-fields-group-label for="summ">Введите сумму кредита от ${a1} до ${a2}  рублей</label>
        <input class="form-fields-input" type="text" name="summa" id="summa" placeholder="Сумма" value="${summa}" required pattern="^[0-9]*$"></div><br>
        </div>
        <div class="form-fields-group">
@@ -160,6 +160,7 @@ input:focus ~ label, label:focus {
 					<option value="2">Являюсь сотрудником компании партнёров этого банка</option>
 				</select></div><br><br>
 		<label  for="name">Собираетесь ли вы досрочно погашать кредит?</label><br>
+	
 	<div class="radio">
     <label class="custom-radio">
       <input type="radio" name="dosr" value="1">

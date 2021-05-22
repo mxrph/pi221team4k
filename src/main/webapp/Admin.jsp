@@ -87,6 +87,8 @@ input:focus ~ label, label:focus {
   <label class="form-fields-group-label" for="name">Введите новую максимальную сумму</label>
 </div><br>
  <div class="a"><input type="submit" name="sign" value="Сохранить изменения"></div>
+ <a href="Login.jsp" role="button">Выйти</a>
+
         </div>
        </form> 
     </body>

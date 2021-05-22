@@ -22,6 +22,9 @@ import team4.Standart;
 
 
 public class Main extends HttpServlet{
+
+	public static int a1;
+	public static int a2;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
@@ -35,8 +38,6 @@ public class Main extends HttpServlet{
 	}
 	private static class RequestCalc {
 		
-		public int a1;
-		public int a2;
 		private final String summa;
 		private final String mesyac;
 		private final String uslovie;

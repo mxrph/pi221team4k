@@ -1,6 +1,10 @@
 package team4;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +26,26 @@ public class Login extends HttpServlet {
         if (check1) {
             request.getRequestDispatcher("/Admin.jsp").forward(request, response);
         } else if (check2) {
+        	try {
+				String filepath = new File("").getCanonicalPath();
+				String[] parsfilepath = filepath.split("/");
+				
+				int lengthpath = parsfilepath.length;
+				String abspath=""; 
+				for(int i=0;i<(lengthpath-1);i++) {
+					abspath=abspath+parsfilepath[i]+"/";
+				}
+				filepath=abspath+"webapps/CalcTeam4/Config/koef.txt";
+				BufferedReader reader= new BufferedReader(new InputStreamReader(new FileInputStream(filepath)));
+				Main.a1 = Integer.parseInt(reader.readLine());
+				Main.a2 = Integer.parseInt(reader.readLine());
+				reader.close();
+				}
+				catch (Exception ex) {
+				ex.printStackTrace();
+				}
+        	request.setAttribute("a1", Main.a1);
+        	request.setAttribute("a2", Main.a2);
             request.getRequestDispatcher("/User.jsp").forward(request, response);
         } else {
         	request.getRequestDispatcher("/LoginFalse.jsp").forward(request, response);
