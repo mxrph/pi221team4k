@@ -25,6 +25,18 @@ border: none; /* убираем некрасивую тень */
 }
 input[type=submit]:hover {background: rgb(0,96,255)); }
 input[type=submit]:active { background: rgb(0,64,255); }
+  a.knopka {
+  color: #fff; /* цвет текста */
+text-decoration: none; /* убирать подчёркивание у ссылок */
+user-select: none; /* убирать выделение текста */
+background: rgb(0,32,255); /* фон кнопки */
+padding: .5em 1.2em; /* отступ от текста */
+outline: none; /* убирать контур в Mozilla */
+border-radius:15px;
+border: none; /* убираем некрасивую тень */
+}
+a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
+a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
 .form-fields-group {
   position: relative;
 }
@@ -147,8 +159,9 @@ input:focus ~ label, label:focus {
 <body background="${pageContext.request.contextPath}/Config/123.jpg">
 <div class = "font">
    <div class = "topright">
-    <div class="a"><div class = "input"> <a href="komanda.jsp" role="button">О нас</a></div></div>
-              </div>
+    <div class="a"><a href="komanda.jsp" role="button" class ="knopka">О нас</a><br><br><br>
+     <a type="submit" href="/CalcTeam4/docs/ExplNote.pdf" class="knopka" >Пояснительная записка</a><br>
+              </div></div>
 <h1>Калькулятор потребительского кредита</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <div class="form-fields-group">

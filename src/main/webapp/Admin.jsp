@@ -25,6 +25,18 @@ border: none; /* убираем некрасивую тень */
 }
 input[type=submit]:hover {background: rgb(0,96,255)); }
 input[type=submit]:active { background: rgb(0,64,0); }
+  a.knopka {
+  color: #fff; /* цвет текста */
+text-decoration: none; /* убирать подчёркивание у ссылок */
+user-select: none; /* убирать выделение текста */
+background: rgb(0,32,255); /* фон кнопки */
+padding: .5em 1.2em; /* отступ от текста */
+outline: none; /* убирать контур в Mozilla */
+border-radius:15px;
+border: none; /* убираем некрасивую тень */
+}
+a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
+a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
 .form-fields-group {
   position: relative;
 }
@@ -86,8 +98,8 @@ input:focus ~ label, label:focus {
   <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" name="a2" required>
   <label class="form-fields-group-label" for="name">Введите новую максимальную сумму</label>
 </div><br>
- <div class="a"><input type="submit" name="sign" value="Сохранить изменения"></div>
- <div class ="input"><a href="Login.jsp" role="button">Выйти</a></div>
+ <div class="a"><input type="submit" name="sign" value="Сохранить изменения">
+<a href="Login.jsp" role="button" class = "knopka">Выйти</a></div>
 
         </div>
        </form> 

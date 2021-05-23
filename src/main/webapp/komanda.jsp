@@ -14,7 +14,7 @@ text-align: center;
 vertical-align:center;
 font-family: "Times New Roman", Times,serif
 }
-input[type=submit] {
+  a.knopka {
   color: #fff; /* цвет текста */
 text-decoration: none; /* убирать подчёркивание у ссылок */
 user-select: none; /* убирать выделение текста */
@@ -24,8 +24,8 @@ outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
 border: none; /* убираем некрасивую тень */
 }
-input[type=submit]:hover {background: rgb(0,96,255)); }
-input[type=submit]:active { background: rgb(0,64,255); }
+a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
+a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
   	.a {
   	text-align :center;
   	}
@@ -36,6 +36,6 @@ input[type=submit]:active { background: rgb(0,64,255); }
 <p>Разработчик №1: Фахретдинова Кристина Олеговна</p>
 <p>Разработчик №2: Шейфель Жанна Владимировна</p>
 <p>Разработчик №3: Степанян Степан Арменович</p>
- <div class="a"><div class = "input"> <a href="User.jsp" role="button">Вернуться к калькулятору</a></div></div></div>
+ <div class="a"><a href="User.jsp" role="button" class ="knopka">Вернуться к калькулятору</a></div></div>
 </body>
 </html>

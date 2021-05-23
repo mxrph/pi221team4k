@@ -30,6 +30,9 @@ input[type=submit]:active { background: rgb(0,64,255); }
     font-family: 'Roboto', sans-serif;
     top: 10px;
     left: 15px;
+    margin: auto;
+text-align: center;
+vertical-align:center;
  
 }
 .form-fields-input {
@@ -45,7 +48,8 @@ input:focus ~ label, label:focus {
   color: blue;
 }
 .font {
-font-family: "Times new roman", Times, serif
+font-family: "Times new roman", Times, serif;
+
 }
 </style>
 <div class="a">
