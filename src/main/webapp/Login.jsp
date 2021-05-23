@@ -81,7 +81,6 @@ font-family: "Times new roman", Times, serif
     padding: 10px;
     font-size: 20px;
     font-weight: 600;
-    background: #0000ffff;
     opacity: 1;
 }
  body {
