@@ -24,7 +24,7 @@ border: none; /* убираем некрасивую тень */
 border-radius:15px;
 }
 input[type=submit]:hover {background: rgb(0,96,255); }
-input[type=submit]:active { background: rgb(0,64,0); }
+input[type=submit]:active { background: rgb(0,64,255); }
   a.knopka {
 color: #fff; /* цвет текста */
 text-decoration: none; /* убирать подчёркивание у ссылок */
@@ -35,7 +35,7 @@ outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
 }
 a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
+a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
 </style>
 <div class ="font">
 

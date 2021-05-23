@@ -23,7 +23,7 @@ outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
 border: none; /* убираем некрасивую тень */
 }
-input[type=submit]:hover {background: rgb(0,96,255)); }
+input[type=submit]:hover {background: rgb(0,96,255); }
 input[type=submit]:active { background: rgb(0,64,255); }
   a.knopka {
   color: #fff; /* цвет текста */
@@ -36,7 +36,7 @@ border-radius:15px;
 border: none; /* убираем некрасивую тень */
 }
 a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
+a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
 .form-fields-group {
   position: relative;
 }

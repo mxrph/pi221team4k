@@ -29,7 +29,7 @@ border: none; /* убираем некрасивую тень */
         transform: translate(+50%, +35%)
 }
 a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
+a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
   	.a {
   	text-align :center;
   	}
