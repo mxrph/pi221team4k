@@ -86,7 +86,7 @@ input:focus ~ label, label:focus {
   	text-align :center;
   	}
 </style>
-<body bgcolor="FFFFFF">
+<body background="${pageContext.request.contextPath}/Config/admin.jpg">
 <div class = "font">
 <h1>Меню администратора</h1>
     <form action="${pageContext.request.contextPath}/Admin" method="post">
@@ -98,8 +98,8 @@ input:focus ~ label, label:focus {
   <input type="text" id="name" class="form-fields-input" placeholder="Введите сумму" name="a2" required>
   <label class="form-fields-group-label" for="name">Введите новую максимальную сумму</label>
 </div><br>
- <div class="a"><input type="submit" name="sign" value="Сохранить изменения">
-<a href="Login.jsp" role="button" class = "knopka">Выйти</a></div>
+<input type="submit" name="sign" value="Сохранить изменения">
+<a href="Login.jsp" role="button" class = "knopka">Выйти</a>
 
         </div>
        </form> 

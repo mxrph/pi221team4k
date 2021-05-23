@@ -195,7 +195,8 @@ input:focus ~ label, label:focus {
       <span>Нет</span>
     </label>
   </div>
-  <input type="submit" name="sign" value="Вычислить"></div>
+  <input type="submit" name="sign" value="Вычислить"></div><br><br>
+  <a href="Login.jsp" role="button" class = "knopka">Выйти</a>
         </div>
     </form> 
     </body>
