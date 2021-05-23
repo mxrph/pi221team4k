@@ -23,19 +23,27 @@ padding: .5em 1.2em; /* отступ от текста */
 outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
 border: none; /* убираем некрасивую тень */
+ top: 50%;
+        left: 50%;
+        margin-right: +50%;
+        transform: translate(+50%, +35%)
 }
 a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
 a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
   	.a {
   	text-align :center;
   	}
-</style>
-<div class = text>
-<h1>Разработчики команды №4</h1>
-<p>Модератор: Самсонов Артём Андреевич</p>
-<p>Разработчик №1: Фахретдинова Кристина Олеговна</p>
-<p>Разработчик №2: Шейфель Жанна Владимировна</p>
-<p>Разработчик №3: Степанян Степан Арменович</p>
+.gradient-text {
+  font-size: 14px;
+  background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  display: table;
+  margin: 20px auto;
+}
+</style><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div><body background="${pageContext.request.contextPath}/Config/efef.jpg"><br>
  <div class="a"><a href="User.jsp" role="button" class ="knopka">Вернуться к калькулятору</a></div></div>
 </body>
 </html>
