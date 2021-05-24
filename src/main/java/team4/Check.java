@@ -43,18 +43,13 @@ public class Check implements Config {
     }
 
     public void readdan() throws IOException {
-		String filepath = new File("").getCanonicalPath();
-		String[] parsfilepath = filepath.split("/");
 		
-		int lengthpath = parsfilepath.length;
-		String abspath=""; 
-		for(int i=0;i<(lengthpath-1);i++) {
-			abspath=abspath+parsfilepath[i]+"/";
-		}
-		filepath=abspath+"webapps/CalcTeam4/Config/";
-    	File file1 = new File(filepath);
+		ClassLoader cl = Check.class.getClassLoader();
+		
+    	File file1 = new File(cl.getResource("Config/adminlogpass.txt").getFile());
+    	File file2 = new File(cl.getResource("Config/userlogpass.txt").getFile());
     	
-        FileReader fr1 = new FileReader(file1+"/adminlogpass.txt");
+        FileReader fr1 = new FileReader(file1);
         BufferedReader reader1 = new BufferedReader(fr1);
         String line;
         while((line = reader1.readLine()) != null) {
@@ -65,8 +60,7 @@ public class Check implements Config {
         }
         reader1.close();
         
-        File file2 = new File(filepath);
-        FileReader fr2 = new FileReader(file2+"/userlogpass.txt");
+        FileReader fr2 = new FileReader(file2);
         BufferedReader reader2 = new BufferedReader(fr2);
         while((line = reader2.readLine()) != null) {
             int end = line.indexOf(' ');

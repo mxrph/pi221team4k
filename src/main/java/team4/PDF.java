@@ -1,11 +1,15 @@
 package team4;
 
-import java.awt.event.*;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.Document;
@@ -16,33 +20,45 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
 
-public class PDF implements ActionListener {
-	
-	public static void create(String goals) throws IOException { 
+/**
+ * Servlet implementation class PDF
+ */
+@WebServlet("/pdf")
+public class PDF extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	public static String filepath;
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+		
+		response.setContentType("application/pdf");
+	        //Get the output stream for writing PDF object        
+		OutputStream out = response.getOutputStream();
+		
+		
+		ClassLoader cl = PDF.class.getClassLoader();
+		
+    	File file1 = new File(cl.getResource("Config/result.pdf").getFile());
+    	File file2 = new File(cl.getResource("fonts/times.ttf").getFile());
+    	File file3 = new File(cl.getResource("Config/123.jpg").getFile());
+    	
+    	filepath = file1.getPath();
+		String fontpath = file2.getPath();
+		String imagepath= file3.getPath();
+		
+		try {
 		Document document = new Document(); 
-		String filepath = new File("").getCanonicalPath();
-		String[] parsfilepath = filepath.split("/");
+
+		PdfWriter.getInstance(document, out);
+	
 		
-		int lengthpath = parsfilepath.length;
-		String abspath=""; 
-		for(int i=0;i<(lengthpath-1);i++) {
-			abspath=abspath+parsfilepath[i]+"/";
-		}
-		filepath=abspath+"webapps/CalcTeam4/Config/result.pdf";
-		String fontpath =abspath+"/webapps/CalcTeam4/fonts/times.ttf";
-		String imagepath=abspath+"webapps/CalcTeam4/Config/123.jpg";
-		
-		try {	
-			PdfWriter.getInstance(document, new FileOutputStream(filepath));
-		} catch (FileNotFoundException | DocumentException e) {
-			e.printStackTrace();
-		}
 			
+		
 		document.open(); 
 		
 		BaseFont times = null;
 		try {
 			times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
+
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}
@@ -94,14 +110,26 @@ public class PDF implements ActionListener {
 			e1.printStackTrace();
 		}
 		document.close(); 
-		
+		} catch (DocumentException exc){
+             throw new IOException(exc.getMessage());
+             }
+		finally {            
+            out.close();
+        }
+	}
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		processRequest(request, response);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		doGet(request, response);
 	}
 
 }
-

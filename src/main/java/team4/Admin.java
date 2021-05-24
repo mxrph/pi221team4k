@@ -1,6 +1,7 @@
 package team4;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,16 +29,13 @@ public class Admin extends HttpServlet {
 		int a2 = Integer.parseInt(request.getParameter("a2"));
 
 		try {
-			String filepath = new File("").getCanonicalPath();
-			String[] parsfilepath = filepath.split("/");
+			ClassLoader cl = Check.class.getClassLoader();
 			
-			int lengthpath = parsfilepath.length;
-			String abspath=""; 
-			for(int i=0;i<(lengthpath-1);i++) {
-				abspath=abspath+parsfilepath[i]+"/";
-			}
-			filepath=abspath+"webapps/CalcTeam4/Config/koef.txt";
-		FileWriter fileWriter = new FileWriter(filepath);
+	    	File file = new File(cl.getResource("Config/koef.txt").getFile());
+
+	    	
+
+		FileWriter fileWriter = new FileWriter(file);
 		PrintWriter printWriter = new PrintWriter(fileWriter);
 		printWriter.println(a1);
 		printWriter.print(a2);

@@ -16,6 +16,7 @@ boolean prov1;
 @Before
 public void prisvoenieTest() throws IOException {
 Check check = new Check();
+check.readdan();
 prov1 = check.check2("1", "1");
 }
 

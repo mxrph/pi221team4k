@@ -4,7 +4,9 @@ package team4;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
@@ -25,20 +27,27 @@ public class Main extends HttpServlet{
 
 	public static int a1;
 	public static int a2;
+
+
 	private static boolean ck;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+		
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		if (ck == false) {
+        	Koef.getKoef();
+        	
+        	request.setAttribute("a1", Main.a1);
+        	request.setAttribute("a2", Main.a2);
 			request.getRequestDispatcher("/UserFalse.jsp").forward(request, response);
 		}
 		else {
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);	
 		}
-		PDF pdf1 = new PDF();
-		String goals = "";
-		pdf1.create(goals);
-		
+
 	}
 	private static class RequestCalc {
 		
@@ -75,25 +84,8 @@ public class Main extends HttpServlet{
 			int dosr_try;
 			ck = true;
 		
-			try {
-				String filepath = new File("").getCanonicalPath();
-				String[] parsfilepath = filepath.split("/");
-				
-				int lengthpath = parsfilepath.length;
-				String abspath=""; 
-				for(int i=0;i<(lengthpath-1);i++) {
-					abspath=abspath+parsfilepath[i]+"/";
-				}
-				filepath=abspath+"webapps/CalcTeam4/Config/koef.txt";
-				BufferedReader reader= new BufferedReader(new InputStreamReader(new FileInputStream(filepath)));
-				a1 = Integer.parseInt(reader.readLine());
-				a2 = Integer.parseInt(reader.readLine());
-				reader.close();
-				}
-				catch (Exception ex) {
-				ex.printStackTrace();
-				}
-			
+
+			Koef.getKoef();
 		
 			try {
 			summa_try = Integer.parseInt(summa);
@@ -146,6 +138,9 @@ public class Main extends HttpServlet{
 			}
 		}
 	}
+	
+	
+	
 }
 		
 	

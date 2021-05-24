@@ -60,8 +60,10 @@ border-radius:15px;
 	
 	<div class ="center">
     <strong><button type = "button" name="Back" onclick="history.back()" class="knopka1">Вернуться в форму ввода данных</button></strong><br><br>
-    <a type="submit" href="/CalcTeam4/Config/result.pdf" class="knopka" > Открыть PDF-файл</a><br><br><br>
-    <a type="submit" href="/CalcTeam4/Config/result.pdf" class="knopka" download>Скачать PDF файл</a></div>
+    <form action="pdf" method="post">
+    <a type="submit" href="pdf" class="knopka">Открыть PDF файл</a><br><br>
+    <a type="submit" href="pdf" class="knopka" download>Скачать PDF файл</a></div>
+    </form>
 </div>
 </body>
 </html>
