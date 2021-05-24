@@ -63,23 +63,23 @@ public class PDF extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		String ty = "Спасибо что воспользовались нашим калькулятором потребительского кредита!";
+		String ty = "Thank you for using our consumer credit calculator!";
 		Paragraph paragraph = new Paragraph();
 	    paragraph.add(new Paragraph(ty, new Font(times,16, Font.BOLD)));
 	    
-	    String lower = "Ниже представлены итоговые вычисления на основе ваших введённых данных";
+	    String lower = "Below are the final calculations based on your entered data";
 	    paragraph.add(new Paragraph(lower, new Font(times,14, Font.BOLD)));
 	    
-		String string_pdf = "Ваша процентная ставка: " + Uslovie.proc + "%";
+		String string_pdf = "Your interest rate: " + Uslovie.proc + "%";
 	    paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 	    
-	    String string_pdf2 = "Ежемесячный платеж составляет: " + Uslovie.mesyac + "руб.";
+	    String string_pdf2 = "The monthly payment is: " + Uslovie.mesyac + "rub.";
 	    paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 	
-	    String string_pdf3 = "Переплата по кредиту составит: " + Uslovie.pereplata + "руб.";
+	    String string_pdf3 = "The overpayment on the loan will be: " + Uslovie.pereplata + "rub.";
 	    paragraph.add(new Paragraph(string_pdf3, new Font(times,14)));
 	    
-	    String string_pdf4 = "Общая сумма кредита: " + Uslovie.itog + "руб.";
+	    String string_pdf4 = "Total loan amount: " + Uslovie.itog + "rub.";
 	    paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
 	    Image img = null;
 		try {
