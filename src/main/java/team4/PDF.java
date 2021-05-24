@@ -5,10 +5,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
+import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -27,6 +30,8 @@ public class PDF implements ActionListener {
 		}
 		filepath=abspath+"webapps/CalcTeam4/Config/result.pdf";
 		String fontpath =abspath+"/webapps/CalcTeam4/fonts/times.ttf";
+		String imagepath=abspath+"webapps/CalcTeam4/Config/123.jpg";
+		
 		try {	
 			PdfWriter.getInstance(document, new FileOutputStream(filepath));
 		} catch (FileNotFoundException | DocumentException e) {
@@ -60,7 +65,29 @@ public class PDF implements ActionListener {
 	    
 	    String string_pdf4 = "Общая сумма кредита: " + Uslovie.itog + "руб.";
 	    paragraph.add(new Paragraph(string_pdf4, new Font(times,14)));
-	    
+	    Image img = null;
+		try {
+			img = Image.getInstance(imagepath);
+			
+			
+		} catch (BadElementException e2) {
+			
+			e2.printStackTrace();
+		} catch (MalformedURLException e2) {
+			
+			e2.printStackTrace();
+		} catch (IOException e2) {
+			
+			e2.printStackTrace();
+		}
+		
+		img.setAbsolutePosition(40, 10); //позиционирование изображения в PDF
+		
+		try {
+				document.add(img);
+			} catch (DocumentException e) {
+				e.printStackTrace();
+			}
 	    try {
 			document.add(paragraph);
 		} catch (DocumentException e1) {

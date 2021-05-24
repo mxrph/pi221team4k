@@ -36,7 +36,7 @@ border-radius:15px;
 border: none; /* убираем некрасивую тень */
 }
 a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(0,64,0); } /* при нажатии */
+a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
 .form-fields-group {
   position: relative;
 }

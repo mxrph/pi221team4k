@@ -25,12 +25,16 @@ public class Main extends HttpServlet{
 
 	public static int a1;
 	public static int a2;
-	
+	private static boolean ck;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
-		request.getRequestDispatcher("/Results.jsp").forward(request, response);
-		
+		if (ck == false) {
+			request.getRequestDispatcher("/UserFalse.jsp").forward(request, response);
+		}
+		else {
+		request.getRequestDispatcher("/Results.jsp").forward(request, response);	
+		}
 		PDF pdf1 = new PDF();
 		String goals = "";
 		pdf1.create(goals);
@@ -69,6 +73,7 @@ public class Main extends HttpServlet{
 			int mesyac_try;
 			int uslovie_try;
 			int dosr_try;
+			ck = true;
 		
 			try {
 				String filepath = new File("").getCanonicalPath();
@@ -103,10 +108,7 @@ public class Main extends HttpServlet{
 				dosr_try = 0;
 			}
 			if (summa_try < a1 || summa_try > a2 || mesyac_try < 12|| mesyac_try > 60) {
-				summa_try = 0;
-				mesyac_try = 0;
-				uslovie_try = 0;
-				dosr_try = 0;
+				ck = false;
 			}
 			if (uslovie_try == 0) {
 				Standart uslovie = new Standart();

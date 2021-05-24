@@ -155,6 +155,16 @@ input:focus ~ label, label:focus {
     .topright {
     float:right;
     }
+    .false {
+    color:red;
+  font-family: "Times New Roman", Times,serif;
+  font-size:22px;
+  font-weight:bold;
+     top: 50%;
+        left: 45%;
+        margin-right: +50%;
+        transform: translate(+0%, +35%)
+}
 </style>
 <body background="${pageContext.request.contextPath}/Config/123.jpg">
 <div class = "font">
@@ -195,6 +205,7 @@ input:focus ~ label, label:focus {
       <span>Нет</span>
     </label>
   </div>
+  <p class="false"> Введите допустимые значения  </p>
   <input type="submit" name="sign" value="Вычислить"></div><br><br>
   <a href="Login.jsp" role="button" class = "knopka">Выйти</a>
         </div>
