@@ -171,9 +171,9 @@ input:focus ~ label, label:focus {
    <div class = "topright">
    
     <div class="a"><a href="komanda.jsp" role="button" class ="knopka">О нас</a>
-          <a type="submit" href="webapp/docs/ExplNote.pdf" class="knopka" >Пояснительная записка</a>
-     <a type="submit" href="webapp/docs/TechSpec.pdf" class="knopka" >Техническое задание</a>
-     <a type="submit" href="webapp/docs/UserGuide.pdf" class="knopka" >Руководство пользователя</a><br><br><br>
+          <a type="submit" href="/docs/ExplNote.pdf" class="knopka" >Пояснительная записка</a>
+     <a type="submit" href="/docs/TechSpec.pdf" class="knopka" >Техническое задание</a>
+     <a type="submit" href="/docs/UserGuide.pdf" class="knopka" >Руководство пользователя</a><br><br><br>
               </div></div></div>
 <h1>Калькулятор потребительского кредита</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
