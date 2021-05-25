@@ -14,22 +14,17 @@ text-align: center;
 vertical-align:center;
 font-family: "Times New Roman", Times,serif
 }
-  a.knopka {
-  color: #fff; /* цвет текста */
+  .knopka1 {
+color: #fff; /* цвет текста */
 text-decoration: none; /* убирать подчёркивание у ссылок */
 user-select: none; /* убирать выделение текста */
 background: rgb(0,32,255); /* фон кнопки */
-padding: .5em 1.2em; /* отступ от текста */
+padding: .5em 1.3em; /* отступ от текста */
 outline: none; /* убирать контур в Mozilla */
 border-radius:15px;
-border: none; /* убираем некрасивую тень */
- top: 50%;
-        left: 50%;
-        margin-right: +50%;
-        transform: translate(+50%, +35%)
 }
-a.knopka:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
-a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
+.knopka1:hover { background: rgb(0,96,255); } /* при наведении курсора мышки */
+.knopka1:active { background: rgb(0,64,255); } /* при нажатии */
   	.a {
   	text-align :center;
   	}
@@ -44,6 +39,6 @@ a.knopka:active { background: rgb(0,64,255); } /* при нажатии */
 }
 </style><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div><body background="${pageContext.request.contextPath}/Config/efef.jpg"><br>
- <div class="a"><a href="User.jsp" role="button" class ="knopka">Вернуться к калькулятору</a></div></div>
+ <div class="a"><button type = "button" name="Back" onclick="history.back()" class="knopka1">Вернуться к калькулятору</button></div></div>
 </body>
 </html>
