@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Калькулятор Stepayan потребительского кредита</title>
+<title>Калькулятор Stepayan Samsonov потребительского кредита</title>
 </head>
 <body>
 <style>
